@@ -1,33 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Temperatura</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            color: #333;
-        }
-        #temperature-input {
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #387eff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: rgb(104, 155, 248);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Conversor de Temperatura</h1>
@@ -39,23 +16,6 @@
     <br><br>
     <div id="result"></div>
 
-    <script>
-        const convertToCelsiusButton = document.getElementById('convert-to-celsius');
-        const convertToFahrenheitButton = document.getElementById('convert-to-fahrenheit');
-        const temperatureInput = document.getElementById('temperature-input');
-        const resultDiv = document.getElementById('result');
-
-        convertToCelsiusButton.addEventListener('click', () => {
-            const temperature = parseFloat(temperatureInput.value);
-            const celsius = (temperature - 32) * 5/9;
-            resultDiv.textContent = `Resultado: ${celsius.toFixed(2)} °C`;
-        });
-
-        convertToFahrenheitButton.addEventListener('click', () => {
-            const temperature = parseFloat(temperatureInput.value);
-            const fahrenheit = (temperature * 9/5) + 32;
-            resultDiv.textContent = `Resultado: ${fahrenheit.toFixed(2)} °F`;
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
